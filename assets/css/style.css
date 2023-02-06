@@ -1,0 +1,99 @@
+:root {
+    --dark: darkslategrey;
+    --darker: black;
+    --light: white;
+    --mid-color: cyan;
+    --border-radius: 10px;
+    --border: 1px solid cyan;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--dark);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    color: var(--light);
+    padding: 2rem 0 0 0;
+}
+
+header .title {
+    font-size: 3rem;
+}
+
+header .subtitle {
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 2rem;
+}
+
+.block {
+    position: relative;
+    align-items: center;
+    background-color: var(--dark);
+    color: var(--light);
+    width: 100%;
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: var(--border);
+}
+
+.block:hover {
+    box-shadow: 0px 0px 5px var(--mid-color);
+}
+
+.block:hover .block-title {
+    box-shadow: 0px 0px 5px var(--mid-color);
+}
+
+.block .block-title {
+    position: absolute;
+    top: -1rem;
+    left: 25%;
+    width: 50%;
+    padding: 0.5rem 0;
+    background-color: var(--dark);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    text-align: center;
+}
+
+.block .block-snippet {
+    background-color: var(--darker);
+    padding: 0.5rem;
+    font-family: monospace;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .block {
+        width: 45%
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .block {
+        width: 30%
+    }
+}
